@@ -1,6 +1,7 @@
-# "Fake"speare -- Machine Learning and the Voices of the Past.
+# "Fake"speare -- Machine Learning and the Voices of the Past
+## Trent Fowler
 
-## TL;DR
+## Summary 
 
 I used neural networks to make new Shakespeare. My network was 'trained' on a selection of Shakespeare's work and then used its training to output new, 'fake' Shakespeare which resembles the old, real Shakespeare.  
 
@@ -237,8 +238,6 @@ The input 'forward' propagates in this fashion until the NN outputs a prediction
 
  This prediction is then compared against a test value, which tells the NN how well or poorly it did. Since the weights within an NN are often initialized randomly the predictions start out pretty bad. But after each attempt the NN can use the information about how good its prediction was to 'back' propagate weight adjustments:
 
-[Get a gif of this happening]
-
 Backpropagation is just the recursive application of the Chain Rule from calculus to the weights in an NN. Incredibly, the equations work such that the weights which contributed most to a bad prediction are updated the most.
 
 This forward propagation -> prediction -> back propagation cycle continues for a while (sometimes days), and then the NN is considered 'trained'. There are a near-infinite number of ways to build, train, and work with NNs, but they will almost always share this basic structure.
@@ -272,15 +271,7 @@ There are a number of excellent resources for implementing a simple RNN, the one
 
 ### Torch, TensorFlow, and Migrating to the Cloud
 
-<Include a table with cloud/no cloud/ tf v.s. torch, breakdown of lua v.s. keras etc, what my sequence length was, etc.>
-<Make my final comparisons between Shakespeare outputs in this section>
-
 The first RNN I built was described in the last paragraph, but the model was I actually trained and used was based on Justin Johnson's [torch-rnn](https://github.com/jcjohnson/torch-rnn) implementation, a multi-layer RNN with both long Short Term Memory (LSTM) and gated recurrent units (GRU).
-
-
-### Interpreting Results
-
-Discuss perplexity and loss, but also subjective evaluation.
 
 ### Future work
 
